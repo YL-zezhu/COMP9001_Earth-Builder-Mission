@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Earth Builder Mission</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <section id="opening" role="dialog" aria-modal="true" aria-label="Mission opening sequence" tabindex="-1">
+    <canvas id="opening-space" aria-hidden="true"></canvas>
+    <div class="opening-top"><span>EB–01 / DEEP SPACE EXPEDITION</span><button id="opening-skip">Skip · A / Enter / Esc</button></div>
+    <div class="opening-copy"><small>EARTH BUILDER → THE UNKNOWN</small><h2 id="opening-title">Earth Builder Mission.</h2><p id="opening-status">Three signals. One expedition.</p><div class="opening-track"><span id="opening-progress"></span></div></div>
+  </section>
+  <main id="app" tabindex="-1">
+    <canvas id="game" aria-label="Full-screen space game"></canvas>
+    <div id="hud"><div class="sector" id="location"></div><div class="status" id="status"></div></div>
+    <div id="boss-health" hidden><span id="boss-phase-label"></span><div class="boss-health-track"><span id="boss-health-fill"></span></div></div>
+    <div id="resources"></div>
+    <div id="equipment"></div>
+    <div id="demo-badge" hidden>DEMO MODE · NO SAVE</div>
+    <div id="prompt" aria-live="polite"></div>
+    <div id="card-screen" aria-live="polite"></div>
+    <div id="bottom-left"><div id="control-hint"></div><div id="toast" role="status"></div></div>
+    <div id="bottom-right"><button id="sound-button" title="Enable or mute sound (M)" aria-pressed="false">ENABLE SOUND · M</button><button id="help-button" title="Full controls">CONTROLS · H</button><span id="pause-hint">ESC · MENU / PAUSE</span></div>
+  </main>
+  <div id="help" class="modal" hidden>
+    <div class="help-card" role="dialog" aria-modal="true" aria-label="Complete control guide">
+      <div class="help-head"><h2>OPERATOR GUIDE</h2><button id="close-help">Close · Esc / B</button></div>
+      <p id="help-mode"></p>
+      <table><thead><tr><th>Action</th><th>Keyboard</th><th>Xbox-style pad</th></tr></thead><tbody>
+        <tr><td>Fly / aim scanner</td><td>W A S D</td><td>Left stick</td></tr>
+        <tr><td>Fire</td><td>J (hold)</td><td>RT (hold)</td></tr>
+        <tr><td>Scan / hold lock</td><td>Q</td><td>X</td></tr>
+        <tr><td>Select cards / pipes</td><td>Arrow keys</td><td>Left stick</td></tr>
+        <tr><td>Rotate / mine</td><td>Space</td><td>A</td></tr>
+        <tr><td>Confirm / restart</td><td>Enter</td><td>A</td></tr>
+        <tr><td>Back on choice screens</td><td>Backspace</td><td>B</td></tr>
+        <tr><td>Pause / continue</td><td>Escape / Enter</td><td>Start / A / B</td></tr>
+        <tr><td>Fullscreen / controls</td><td>F / H</td><td>Controls on screen</td></tr>
+        <tr><td>Enable / mute sound</td><td>M or on-screen button</td><td>View / Back or on-screen button</td></tr>
+      </tbody></table>
+      <p>Press Y to open this guide with a controller. Hints change automatically to match the device you used last. Keyboard works through the entire game. Vibration is optional. If your browser blocks controller-only audio startup, click ENABLE SOUND once.</p>
+      <p id="demo-help" hidden>Presentation: 1–3 routes · 4–5 boss phases · 6 ending · 0 menu. Demo never writes a save.</p>
+    </div>
+  </div>
+  <script src="/audio.js" defer></script><script src="/game.js" defer></script><script src="/opening.js" defer></script>
+</body>
+</html>
