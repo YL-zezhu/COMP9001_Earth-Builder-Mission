@@ -1,4 +1,10 @@
-# Earth Builder Mission — Browser batch 6
+# Earth Builder Mission
+
+**Complete project files:** https://github.com/YL-zezhu/COMP9001_Earth-Builder-Mission
+
+This project includes visual and audio assets that exceed Ed's 2 MB upload limit.
+Please download the complete repository to run the game. Keep the project folders
+together and run `python main.py` from the project directory.
 
 The game rules, progression, puzzles, combat and save are written in Python. A
 local Python standard-library server supplies a browser display and keyboard or
